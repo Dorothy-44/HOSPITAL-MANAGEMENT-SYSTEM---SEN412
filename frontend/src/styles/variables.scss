@@ -1,0 +1,122 @@
+// ============================================
+// Color Palette
+// ============================================
+$primary: #0d6efd;
+$primary-dark: #0a58ca;
+$primary-light: #cfe2ff;
+
+$secondary: #6c757d;
+$success: #198754;
+$success-light: #d1e7dd;
+$danger: #dc3545;
+$danger-light: #f8d7da;
+$warning: #ffc107;
+$warning-light: #fff3cd;
+$info: #0dcaf0;
+$info-light: #cff4fc;
+
+// Hospital-specific colors
+$hospital-blue: #1a73e8;
+$hospital-teal: #00897b;
+$hospital-purple: #7b1fa2;
+$hospital-green: #2e7d32;
+$hospital-red: #c62828;
+
+// Neutral colors
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+
+// ============================================
+// Typography
+// ============================================
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.5rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 1.75;
+
+// ============================================
+// Spacing
+// ============================================
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+
+// ============================================
+// Border Radius
+// ============================================
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+$border-radius-pill: 50rem;
+$border-radius-circle: 50%;
+
+// ============================================
+// Shadows
+// ============================================
+$shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+$shadow-xl: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+
+// ============================================
+// Transitions
+// ============================================
+$transition-fast: 150ms ease-in-out;
+$transition-base: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;
+
+// ============================================
+// Z-index
+// ============================================
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+
+// ============================================
+// Layout
+// ============================================
+$sidebar-width: 280px;
+$sidebar-collapsed-width: 80px;
+$header-height: 64px;
+$footer-height: 60px;
+
+// ============================================
+// Breakpoints
+// ============================================
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;

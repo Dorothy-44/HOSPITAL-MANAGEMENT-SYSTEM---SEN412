@@ -1,0 +1,166 @@
+// ============================================
+// Layout Mixins
+// ============================================
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// ============================================
+// Responsive Mixins
+// ============================================
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == 'xs' {
+    @media (max-width: calc($breakpoint-sm - 1px)) { @content; }
+
+  }
+  @else if $breakpoint == 'sm' {
+    @media (min-width: $breakpoint-sm) { @content; }
+  }
+  @else if $breakpoint == 'md' {
+    @media (min-width: $breakpoint-md) { @content; }
+  }
+  @else if $breakpoint == 'lg' {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @else if $breakpoint == 'xl' {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+  @else if $breakpoint == 'xxl' {
+    @media (min-width: $breakpoint-xxl) { @content; }
+  }
+}
+
+// ============================================
+// Typography Mixins
+// ============================================
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-gradient($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ============================================
+// Visual Mixins
+// ============================================
+
+@mixin card-shadow {
+  box-shadow: $shadow-sm;
+  transition: box-shadow $transition-base;
+  
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin hover-lift {
+  transition: transform $transition-base, box-shadow $transition-base;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gray-100;
+    border-radius: $border-radius-pill;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-400;
+    border-radius: $border-radius-pill;
+    
+    &:hover {
+      background: $gray-500;
+    }
+  }
+}
+
+// ============================================
+// Animation Mixins
+// ============================================
+
+@mixin fade-in($duration: 300ms) {
+  animation: fadeIn $duration ease-in-out;
+}
+
+@mixin slide-in-left($duration: 300ms) {
+  animation: slideInLeft $duration ease-in-out;
+}
+
+@mixin slide-in-right($duration: 300ms) {
+  animation: slideInRight $duration ease-in-out;
+}
+
+@mixin slide-in-up($duration: 300ms) {
+  animation: slideInUp $duration ease-in-out;
+}
+
+// ============================================
+// Button Mixins
+// ============================================
+
+@mixin button-variant($bg, $color: $white) {
+  background-color: $bg;
+  color: $color;
+  border: 1px solid $bg;
+  
+  &:hover {
+    background-color: darken($bg, 7.5%);
+    border-color: darken($bg, 10%);
+    color: $color;
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba($bg, 0.25);
+  }
+  
+  &:disabled {
+    background-color: $bg;
+    border-color: $bg;
+    opacity: 0.65;
+  }
+}
+
+// ============================================
+// Status Badge Mixins
+// ============================================
+
+@mixin status-badge($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  padding: 0.25rem 0.75rem;
+  border-radius: $border-radius-pill;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  display: inline-block;
+}
